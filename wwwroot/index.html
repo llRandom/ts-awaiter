@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html ng-app="ts-async">
+    <head>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+        <script type="text/javascript" src="./js/awaiter.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
+    </head>
+    <body ng-controller="mainController">
+        <div>
+            Response: {{ response }}
+        </div>
+        <button ng-click="getFirst()">Get first</button>
+        <button ng-click="getSecond()">Get second</button>
+    </body>
+</html>

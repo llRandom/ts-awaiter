@@ -1,0 +1,20 @@
+{
+  "name": "ng-typescript-await",
+  "version": "1.0.0",
+  "description": "using of typescript await with angular promises",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eugene Gusarov",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "typescript": "^1.8.10",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^2.13.6",
+    "merge2": "^1.0.2"
+  }
+}
