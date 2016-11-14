@@ -33,6 +33,19 @@ function mainController($scope: ng.IScope & any, myService: IMyService, $timeout
         ]);
         $scope.response = response[0];
     };
+
+    $scope.getError = async function() {
+        try {
+            await generateError();
+            $scope.response = 'fail. error expected';
+        } catch (e) {
+            $scope.response = 'caught error: ' + e;
+        }
+    }
+
+    function generateError() {
+        return $q.reject('test');
+    }
 }
 
 let module = angular.module('ts-async', ['ts-awaiter']);
