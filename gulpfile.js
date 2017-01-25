@@ -1,11 +1,13 @@
 var gulp = require('gulp');
+var sourcemaps = require("gulp-sourcemaps")
 var ts = require('gulp-typescript');
-var merge = require('merge2');
+var tsProject = ts.createProject('tsconfig.json')
 
 gulp.task('default', function () {
-    var src = gulp.src('./wwwroot/ts/*.ts');
-    var typings = gulp.src('./typings/**/*.d.ts');
-    return merge(src, typings)
-        .pipe(ts('tsconfig.json'))
-        .pipe(gulp.dest('./wwwroot/js'));
+    return tsProject
+        .src()
+        .pipe(sourcemaps.init())
+        .pipe(tsProject()).js
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest("wwwroot/js"))
 })

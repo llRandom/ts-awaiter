@@ -1,8 +1,18 @@
 {
+    "include": [
+        "wwwroot/ts/*.ts",
+        "node_modules/@types/**/*.d.ts"
+    ],
+    "compileOnSave": false,
     "compilerOptions": {
+        "outDir": "wwwroot/js",
         "module": "commonjs",
-        "target": "es6",
+        "target": "es5",
         "noImplicitAny": true,
-        "sourceMap": true
+        "sourceMap": true,
+        "lib": [
+            "es6",
+            "dom"
+        ]
     }
 }

@@ -4,6 +4,7 @@
   "description": "using of typescript await with angular promises",
   "main": "index.js",
   "scripts": {
+    "install": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Eugene Gusarov",
@@ -12,9 +13,10 @@
     "express": "^4.14.0"
   },
   "devDependencies": {
-    "typescript": "^1.8.10",
+    "@types/angular": "^1.6.2",
     "gulp": "^3.9.1",
-    "gulp-typescript": "^2.13.6",
-    "merge2": "^1.0.2"
+    "gulp-sourcemaps": "^2.4.0",
+    "gulp-typescript": "^3.1.4",
+    "typescript": "^2.1.5"
   }
 }
